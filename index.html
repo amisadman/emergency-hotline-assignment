@@ -49,7 +49,7 @@
           <div
             class="badge badge-soft badge-primary flex items-center gap-3 p-4 rounded-2xl bg-[#41ff6b1a!important] text-[black!important] font-bold"
           >
-            <h1>100</h1>
+            <h1 id="coinCount">100</h1>
             <img class="h-6" src="./assets/coin.png" alt="" />
           </div>
           <!-- copy -->
@@ -96,7 +96,9 @@
                 <h2 class="service-name text-lg font-bold">
                   জাতীয় জরুরি সেবা
                 </h2>
-                <p class="text-gray-500 text-base">National Emergency</p>
+                <p class="service-name text-gray-500 text-base">
+                  National Emergency
+                </p>
                 <h2 class="service-number text-3xl font-semibold">999</h2>
                 <h2
                   class="text-base p-1 text-gray-500 bg-[#f2f2f2] w-14 text-center rounded-2xl"
@@ -281,13 +283,16 @@
                   <i class="fa-solid fa-trash"></i>Clear
                 </button>
               </div>
-              <ul class="mt-3 space-y-2 text-sm text-gray-700 list-none"></ul>
+              <ul
+                id="history"
+                class="mt-3 space-y-2 text-sm text-gray-700 list-none"
+              ></ul>
             </div>
           </div>
         </div>
       </div>
     </section>
-  <!-- activitys -->
+    <!-- activitys -->
     <script src="./js/script.js"></script>
   </body>
 </html>
