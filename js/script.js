@@ -69,6 +69,36 @@ const deleteButton = document.getElementById("deleteButton");
   deleteButton.addEventListener("click", () => {
     history.innerHTML = "";
   });
-  
+
 //----------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------
+/*
+    Copy button part
+*/
+
+const copyButtons = document.querySelectorAll(".copy-button");
+const copyCount = document.getElementById("copyCount");
+let temp = parseInt(copyCount.innerText);
+
+for (const btn of copyButtons) {
+  const card = btn.closest(".card");
+  const phoneNumber = card.querySelector(".service-number").innerText;
+
+  btn.addEventListener("click", () => {
+    navigator.clipboard.writeText(phoneNumber)
+      .then(() => {
+        alert(`Hotline number ${phoneNumber} copied!`);
+        temp++;
+        copyCount.innerText = temp;
+      })
+      .catch(err => {
+        alert("Failed to copy!");
+        console.error(err);
+      });
+  });
+}
+//-------------------------------------------------------------------------------------------
+
+  
+
 
